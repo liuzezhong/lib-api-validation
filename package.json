@@ -1,18 +1,18 @@
 {
-  "name": "libs-request-validation",
+  "name": "lib-api-validation",
   "version": "1.0.0",
   "description": "This is a library that validations http request.",
-  "main": "dist/libs-request-validation.umd.js",
-  "module": "dist/libs-request-validation.es5.js",
-  "jsnext:main": "src/libs/libs-request-validation.ts",
-  "typings": "dist/types/libs-request-validation.d.ts",
+  "main": "dist/lib-api-validation.umd.js",
+  "module": "dist/lib-api-validation.es5.js",
+  "jsnext:main": "src/libs/lib-api-validation.ts",
+  "typings": "dist/types/lib-api-validation.d.ts",
   "files": [
     "dist"
   ],
-  "author": "uchidate_satoshi <uchidate-sa@legendapl.com>",
+  "author": "lzz",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.lakeel.com/applications/libs/lib-request-validation"
+    "url": "https://github.com/liuzezhong/lib-api-validation"
   },
   "license": "MIT",
   "engines": {
