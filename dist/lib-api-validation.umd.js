@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.libsRequestValidation = {})));
+	(factory((global.libApiValidation = {})));
 }(this, (function (exports) { 'use strict';
 
 	var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -3798,7 +3798,7 @@
 
 	unwrapExports(normalizeEmail_1);
 
-	var C__Users_uchidateSa_Documents_library_libsRequestValidation_node_modules_validator = createCommonjsModule(function (module, exports) {
+	var D__WorkSpace_Study_libApiValidation_node_modules_validator = createCommonjsModule(function (module, exports) {
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -4167,7 +4167,7 @@
 	module.exports = exports['default'];
 	});
 
-	unwrapExports(C__Users_uchidateSa_Documents_library_libsRequestValidation_node_modules_validator);
+	unwrapExports(D__WorkSpace_Study_libApiValidation_node_modules_validator);
 
 	var libphonenumber = createCommonjsModule(function (module, exports) {
 	(function(f){{module.exports=f();}})(function(){return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof commonjsRequire=="function"&&commonjsRequire;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r);}return n[o].exports}var i=typeof commonjsRequire=="function"&&commonjsRequire;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
@@ -9490,7 +9490,7 @@
 	        // -------------------------------------------------------------------------
 	        // Private Properties
 	        // -------------------------------------------------------------------------
-	        this.validatorJs = C__Users_uchidateSa_Documents_library_libsRequestValidation_node_modules_validator;
+	        this.validatorJs = D__WorkSpace_Study_libApiValidation_node_modules_validator;
 	        this.libPhoneNumber = {
 	            phoneUtil: libphonenumber.PhoneNumberUtil.getInstance(),
 	        };
@@ -11858,4 +11858,4 @@
 	Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=libs-request-validation.umd.js.map
+//# sourceMappingURL=lib-api-validation.umd.js.map

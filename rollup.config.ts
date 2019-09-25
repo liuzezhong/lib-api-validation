@@ -7,7 +7,7 @@ import json from 'rollup-plugin-json';
 
 const pkg = require('./package.json')
 
-const libraryName = 'libs-request-validation'
+const libraryName = 'lib-api-validation'
 
 export default {
   input: `src/libs/${libraryName}.ts`,
@@ -31,7 +31,7 @@ export default {
     nodeResolve({ jsnext: true }),
     // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
     commonjs({
-      namedExports:{
+      namedExports: {
         'class-validator': [
           'Validator',
           'Validate',
