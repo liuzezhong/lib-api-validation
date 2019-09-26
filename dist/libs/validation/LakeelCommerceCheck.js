@@ -11,6 +11,7 @@ var validTypeEnum;
 (function (validTypeEnum) {
     validTypeEnum["FETCH_API"] = "fetch_api";
     validTypeEnum["IS_STRING"] = "is_string";
+    validTypeEnum["IS_NUMBER"] = "is_number";
 })(validTypeEnum || (validTypeEnum = {}));
 var res = {
     errorCode: '',
@@ -42,7 +43,6 @@ var LakeelCommerceCheck = (function () {
         return res;
     };
     LakeelCommerceCheck.prototype.defaultMessage = function (args) {
-        console.log('argsargs', args);
         return args.property + " must be string.";
     };
     LakeelCommerceCheck = __decorate([

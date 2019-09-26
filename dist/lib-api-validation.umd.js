@@ -11628,217 +11628,11 @@
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	}
 
-	var validator = new classValidator_1();
-	var HalfWidth = (function () {
-	    function HalfWidth() {
-	    }
-	    HalfWidth.prototype.validate = function (text, args) {
-	        return validator.isHalfWidth(text);
-	    };
-	    HalfWidth.prototype.defaultMessage = function (args) {
-	        return "A field " + args.property + " must contain only half-width character(s).";
-	    };
-	    HalfWidth = __decorate([
-	        classValidator_5({ name: 'HALF_WITDH_CHARACTER_ONLY', async: false })
-	    ], HalfWidth);
-	    return HalfWidth;
-	}());
-
-	var validator$1 = new classValidator_1();
-	var IsArray = (function () {
-	    function IsArray() {
-	    }
-	    IsArray.prototype.validate = function (obj, args) {
-	        return validator$1.isArray(obj);
-	    };
-	    IsArray.prototype.defaultMessage = function (args) {
-	        return args.property + " must be array.";
-	    };
-	    IsArray = __decorate([
-	        classValidator_5({ name: 'IS_ARRAY', async: false })
-	    ], IsArray);
-	    return IsArray;
-	}());
-
-	var validator$2 = new classValidator_1();
-	var IsBoolean = (function () {
-	    function IsBoolean() {
-	    }
-	    IsBoolean.prototype.validate = function (obj, args) {
-	        return validator$2.isBoolean(obj);
-	    };
-	    IsBoolean.prototype.defaultMessage = function (args) {
-	        return args.property + " must be boolean.";
-	    };
-	    IsBoolean = __decorate([
-	        classValidator_5({ name: 'IS_BOOLEAN', async: false })
-	    ], IsBoolean);
-	    return IsBoolean;
-	}());
-
-	var validator$3 = new classValidator_1();
-	var IsNotEmpty = (function () {
-	    function IsNotEmpty() {
-	    }
-	    IsNotEmpty.prototype.validate = function (obj, args) {
-	        return validator$3.arrayMinSize(obj, 0);
-	    };
-	    IsNotEmpty.prototype.defaultMessage = function (args) {
-	        return args.property + " must not be empty.";
-	    };
-	    IsNotEmpty = __decorate([
-	        classValidator_5({ name: 'IS_NOT_EMPTY', async: false })
-	    ], IsNotEmpty);
-	    return IsNotEmpty;
-	}());
-
-	var validator$4 = new classValidator_1();
-	var IsNumber = (function () {
-	    function IsNumber() {
-	    }
-	    IsNumber.prototype.validate = function (obj, args) {
-	        return validator$4.isNumber(obj);
-	    };
-	    IsNumber.prototype.defaultMessage = function (args) {
-	        return args.property + " must be number.";
-	    };
-	    IsNumber = __decorate([
-	        classValidator_5({ name: 'IS_NUMBER', async: false })
-	    ], IsNumber);
-	    return IsNumber;
-	}());
-
-	var IsObject = (function () {
-	    function IsObject() {
-	    }
-	    IsObject.prototype.validate = function (obj, args) {
-	        return typeof obj === 'object';
-	    };
-	    IsObject.prototype.defaultMessage = function (args) {
-	        return args.property + " must be object.";
-	    };
-	    IsObject = __decorate([
-	        classValidator_5({ name: 'IS_OBJECT', async: false })
-	    ], IsObject);
-	    return IsObject;
-	}());
-
-	var validator$5 = new classValidator_1();
-	var IsString = (function () {
-	    function IsString() {
-	    }
-	    IsString.prototype.validate = function (obj, args) {
-	        return validator$5.isString(obj);
-	    };
-	    IsString.prototype.defaultMessage = function (args) {
-	        return args.property + " must be string.";
-	    };
-	    IsString = __decorate([
-	        classValidator_5({ name: 'IS_STRING', async: false })
-	    ], IsString);
-	    return IsString;
-	}());
-
-	var validator$6 = new classValidator_1();
-	var IsEmail = (function () {
-	    function IsEmail() {
-	    }
-	    IsEmail.prototype.validate = function (obj, args) {
-	        return validator$6.isEmail(obj);
-	    };
-	    IsEmail.prototype.defaultMessage = function (args) {
-	        return args.property + " must be in the form of a e-mail address.";
-	    };
-	    IsEmail = __decorate([
-	        classValidator_5({ name: 'IS_EMAIL', async: false })
-	    ], IsEmail);
-	    return IsEmail;
-	}());
-
-	var validator$7 = new classValidator_1();
-	var Max = (function () {
-	    function Max() {
-	    }
-	    Max.prototype.validate = function (num, args) {
-	        return validator$7.max(num, args.constraints[0]);
-	    };
-	    Max.prototype.defaultMessage = function (args) {
-	        return "A field " + args.property + " exceeds. Max is (" + args.constraints[0] + ").";
-	    };
-	    Max = __decorate([
-	        classValidator_5({ name: 'MAX', async: false })
-	    ], Max);
-	    return Max;
-	}());
-
-	var validator$8 = new classValidator_1();
-	var MaxLength = (function () {
-	    function MaxLength() {
-	    }
-	    MaxLength.prototype.validate = function (text, args) {
-	        return validator$8.maxLength(text, args.constraints[0]);
-	    };
-	    MaxLength.prototype.defaultMessage = function (args) {
-	        return "A field " + args.property + " exceeds. Max length is (" + args.constraints[0] + ").";
-	    };
-	    MaxLength = __decorate([
-	        classValidator_5({ name: 'MAX_LENGTH_EXCEEDED', async: false })
-	    ], MaxLength);
-	    return MaxLength;
-	}());
-
-	var validator$9 = new classValidator_1();
-	var MinLength = (function () {
-	    function MinLength() {
-	    }
-	    MinLength.prototype.validate = function (text, args) {
-	        return validator$9.minLength(text, args.constraints[0]);
-	    };
-	    MinLength.prototype.defaultMessage = function (args) {
-	        return "A field '" + args.property + "' is too short. Min length is (" + args.constraints[0] + ").";
-	    };
-	    MinLength = __decorate([
-	        classValidator_5({ name: 'MIN_LENGTH_SHORT', async: false })
-	    ], MinLength);
-	    return MinLength;
-	}());
-
-	var validator$a = new classValidator_1();
-	var Required = (function () {
-	    function Required() {
-	    }
-	    Required.prototype.validate = function (obj, args) {
-	        return validator$a.isNotEmpty(obj);
-	    };
-	    Required.prototype.defaultMessage = function (args) {
-	        return "A field " + args.property + " is required.";
-	    };
-	    Required = __decorate([
-	        classValidator_5({ name: 'REQUIRED', async: false })
-	    ], Required);
-	    return Required;
-	}());
-
-	var IsNumberString = (function () {
-	    function IsNumberString() {
-	    }
-	    IsNumberString.prototype.validate = function (obj, args) {
-	        var regex = new RegExp(/[0-9]/);
-	        return regex.test(obj);
-	    };
-	    IsNumberString.prototype.defaultMessage = function (args) {
-	        return args.property + " must be number.";
-	    };
-	    IsNumberString = __decorate([
-	        classValidator_5({ name: 'IS_NUMBER_STRING', async: false })
-	    ], IsNumberString);
-	    return IsNumberString;
-	}());
-
 	var validTypeEnum;
 	(function (validTypeEnum) {
 	    validTypeEnum["FETCH_API"] = "fetch_api";
 	    validTypeEnum["IS_STRING"] = "is_string";
+	    validTypeEnum["IS_NUMBER"] = "is_number";
 	})(validTypeEnum || (validTypeEnum = {}));
 	var res = {
 	    errorCode: '',
@@ -11870,7 +11664,6 @@
 	        return res;
 	    };
 	    LakeelCommerceCheck.prototype.defaultMessage = function (args) {
-	        console.log('argsargs', args);
 	        return args.property + " must be string.";
 	    };
 	    LakeelCommerceCheck = __decorate([
@@ -11885,19 +11678,6 @@
 	exports.ValidationError = classValidator_4;
 	exports.ValidateNested = classValidator_8;
 	exports.IsOptional = classValidator_9;
-	exports.HalfWidth = HalfWidth;
-	exports.IsArray = IsArray;
-	exports.IsBoolean = IsBoolean;
-	exports.IsNotEmpty = IsNotEmpty;
-	exports.IsNumber = IsNumber;
-	exports.IsObject = IsObject;
-	exports.IsString = IsString;
-	exports.IsEmail = IsEmail;
-	exports.Max = Max;
-	exports.MaxLength = MaxLength;
-	exports.MinLength = MinLength;
-	exports.Required = Required;
-	exports.IsNumberString = IsNumberString;
 	exports.LakeelCommerceCheck = LakeelCommerceCheck;
 
 	Object.defineProperty(exports, '__esModule', { value: true });

@@ -4,16 +4,11 @@ import {
   ValidationArguments,
   Validator
 } from 'class-validator';
-// import IsString from './IsString';
-
-// const checkResult: any = {
-//   validMessage: 'all check right!',
-//   validResult: true
-// };
 
 enum validTypeEnum {
   FETCH_API = 'fetch_api',
-  IS_STRING = 'is_string'
+  IS_STRING = 'is_string',
+  IS_NUMBER = 'is_number'
 }
 
 const res: any = {
@@ -47,7 +42,6 @@ export class LakeelCommerceCheck implements ValidatorConstraintInterface {
   }
 
   defaultMessage(args: ValidationArguments): string {
-    console.log('argsargs', args);
     return `${args.property} must be string.`;
   }
 }
