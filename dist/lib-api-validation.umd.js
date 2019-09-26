@@ -11839,8 +11839,13 @@
 	    function LakeelCommerceCheck() {
 	    }
 	    LakeelCommerceCheck.prototype.validate = function (obj, args) {
-	        console.log('obj21', obj);
-	        return false;
+	        var res = false;
+	        var validator = new classValidator_1();
+	        if (obj === 'VC000001') {
+	            console.log('objobjobj', obj);
+	            res = validator.isString(obj);
+	        }
+	        return res;
 	    };
 	    LakeelCommerceCheck.prototype.defaultMessage = function (args) {
 	        console.log('argsargs', args);
