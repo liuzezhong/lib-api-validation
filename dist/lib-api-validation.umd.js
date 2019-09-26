@@ -11835,6 +11835,23 @@
 	    return IsNumberString;
 	}());
 
+	var LakeelCommerceCheck = (function () {
+	    function LakeelCommerceCheck() {
+	    }
+	    LakeelCommerceCheck.prototype.validate = function (obj, args) {
+	        console.log('obj21', obj);
+	        return true;
+	    };
+	    LakeelCommerceCheck.prototype.defaultMessage = function (args) {
+	        console.log('argsargs', args);
+	        return args.property + " must be string.";
+	    };
+	    LakeelCommerceCheck = __decorate([
+	        classValidator_5({ name: 'LAKEEL_COMMERCE_CHECK', async: false })
+	    ], LakeelCommerceCheck);
+	    return LakeelCommerceCheck;
+	}());
+
 	exports.Validator = classValidator_1;
 	exports.Validate = classValidator_2;
 	exports.validate = classValidator_10;
@@ -11854,6 +11871,7 @@
 	exports.MinLength = MinLength;
 	exports.Required = Required;
 	exports.IsNumberString = IsNumberString;
+	exports.LakeelCommerceCheck = LakeelCommerceCheck;
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 

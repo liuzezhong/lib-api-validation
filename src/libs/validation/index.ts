@@ -11,3 +11,4 @@ export { MaxLength } from './MaxLength';
 export { MinLength } from './MinLength';
 export { Required } from './Required';
 export { IsNumberString } from './IsNumberString';
+export { LakeelCommerceCheck } from './LakeelCommerceCheck';

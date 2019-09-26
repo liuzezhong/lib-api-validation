@@ -11829,5 +11829,22 @@ var IsNumberString = (function () {
     return IsNumberString;
 }());
 
-export { classValidator_1 as Validator, classValidator_2 as Validate, classValidator_10 as validate, classValidator_4 as ValidationError, classValidator_8 as ValidateNested, classValidator_9 as IsOptional, HalfWidth, IsArray, IsBoolean, IsNotEmpty, IsNumber, IsObject, IsString, IsEmail, Max, MaxLength, MinLength, Required, IsNumberString };
+var LakeelCommerceCheck = (function () {
+    function LakeelCommerceCheck() {
+    }
+    LakeelCommerceCheck.prototype.validate = function (obj, args) {
+        console.log('obj21', obj);
+        return true;
+    };
+    LakeelCommerceCheck.prototype.defaultMessage = function (args) {
+        console.log('argsargs', args);
+        return args.property + " must be string.";
+    };
+    LakeelCommerceCheck = __decorate([
+        classValidator_5({ name: 'LAKEEL_COMMERCE_CHECK', async: false })
+    ], LakeelCommerceCheck);
+    return LakeelCommerceCheck;
+}());
+
+export { classValidator_1 as Validator, classValidator_2 as Validate, classValidator_10 as validate, classValidator_4 as ValidationError, classValidator_8 as ValidateNested, classValidator_9 as IsOptional, HalfWidth, IsArray, IsBoolean, IsNotEmpty, IsNumber, IsObject, IsString, IsEmail, Max, MaxLength, MinLength, Required, IsNumberString, LakeelCommerceCheck };
 //# sourceMappingURL=lib-api-validation.es5.js.map

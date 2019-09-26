@@ -19,5 +19,6 @@ export {
   MaxLength,
   MinLength,
   Required,
-  IsNumberString
+  IsNumberString,
+  LakeelCommerceCheck,
 } from './validation';

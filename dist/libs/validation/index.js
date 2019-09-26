@@ -26,4 +26,6 @@ var Required_1 = require("./Required");
 exports.Required = Required_1.Required;
 var IsNumberString_1 = require("./IsNumberString");
 exports.IsNumberString = IsNumberString_1.IsNumberString;
+var LakeelCommerceCheck_1 = require("./LakeelCommerceCheck");
+exports.LakeelCommerceCheck = LakeelCommerceCheck_1.LakeelCommerceCheck;
 //# sourceMappingURL=index.js.map

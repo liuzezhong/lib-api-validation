@@ -21,4 +21,5 @@ exports.MaxLength = validation_1.MaxLength;
 exports.MinLength = validation_1.MinLength;
 exports.Required = validation_1.Required;
 exports.IsNumberString = validation_1.IsNumberString;
+exports.LakeelCommerceCheck = validation_1.LakeelCommerceCheck;
 //# sourceMappingURL=lib-api-validation.js.map
