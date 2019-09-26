@@ -11834,7 +11834,7 @@ var LakeelCommerceCheck = (function () {
     }
     LakeelCommerceCheck.prototype.validate = function (obj, args) {
         console.log('obj21', obj);
-        return true;
+        return false;
     };
     LakeelCommerceCheck.prototype.defaultMessage = function (args) {
         console.log('argsargs', args);
