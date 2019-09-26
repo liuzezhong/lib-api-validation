@@ -23,7 +23,7 @@ var LakeelCommerceCheck = (function () {
     LakeelCommerceCheck.prototype.validate = function (validObj, args) {
         console.log('validObj', validObj);
         if (validObj.type !== validTypeEnum.FETCH_API && !validObj.value) {
-            res.errorCode = 'E0001';
+            res.errorCode = 'P0001';
             res.validResult = false;
             res.validMessage = 'params err';
         }
@@ -33,8 +33,9 @@ var LakeelCommerceCheck = (function () {
                 break;
             case validTypeEnum.IS_STRING:
                 if (!validator.isString(validObj.value)) {
-                    res.message = 'not string';
-                    res.checkResult = false;
+                    res.validMessage = 'not string';
+                    res.validResult = false;
+                    res.errorCode = 'E0001';
                 }
                 break;
         }
