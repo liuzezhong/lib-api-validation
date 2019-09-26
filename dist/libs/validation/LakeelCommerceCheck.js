@@ -7,15 +7,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var class_validator_1 = require("class-validator");
+var validTypeEnum;
+(function (validTypeEnum) {
+    validTypeEnum[validTypeEnum["FETCH_API"] = 0] = "FETCH_API";
+    validTypeEnum[validTypeEnum["IS_STRING"] = 1] = "IS_STRING";
+})(validTypeEnum || (validTypeEnum = {}));
+var res = {
+    errorCode: '',
+    validMessage: 'check passed',
+    validResult: true
+};
 var LakeelCommerceCheck = (function () {
     function LakeelCommerceCheck() {
     }
-    LakeelCommerceCheck.prototype.validate = function (obj, args) {
-        var res = false;
+    LakeelCommerceCheck.prototype.validate = function (validObj, args) {
+        if (validObj.type !== validTypeEnum.FETCH_API && !validObj.value) {
+            res.errorCode = 'E0001';
+            res.validResult = false;
+            res.validMessage = 'params err';
+        }
         var validator = new class_validator_1.Validator();
-        if (obj === 'VC000001') {
-            console.log('objobjobj', obj);
-            res = validator.isString(obj);
+        switch (validObj.type) {
+            case validTypeEnum.FETCH_API:
+                break;
+            case validTypeEnum.IS_STRING:
+                if (!validator.isString(validObj.value)) {
+                    res.message = 'not string';
+                    res.checkResult = false;
+                }
+                break;
         }
         return res;
     };

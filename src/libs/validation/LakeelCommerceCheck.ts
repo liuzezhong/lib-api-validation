@@ -11,14 +11,35 @@ import {
 //   validResult: true
 // };
 
+enum validTypeEnum {
+  FETCH_API,
+  IS_STRING
+}
+
+const res: any = {
+  errorCode: '',
+  validMessage: 'check passed',
+  validResult: true
+};
+
 @ValidatorConstraint({ name: 'LAKEEL_COMMERCE_CHECK', async: false })
 export class LakeelCommerceCheck implements ValidatorConstraintInterface {
-  validate(obj: any, args: ValidationArguments): boolean {
-    let res: any = false;
+  validate(validObj: any, args: ValidationArguments): boolean {
+    if (validObj.type !== validTypeEnum.FETCH_API && !validObj.value) {
+      res.errorCode = 'E0001';
+      res.validResult = false;
+      res.validMessage = 'params err';
+    }
     const validator: any = new Validator();
-    if (obj === 'VC000001') {
-      console.log('objobjobj', obj);
-      res = validator.isString(obj);
+    switch (validObj.type) {
+      case validTypeEnum.FETCH_API:
+        break;
+      case validTypeEnum.IS_STRING:
+        if (!validator.isString(validObj.value)) {
+          res.message = 'not string';
+          res.checkResult = false;
+        }
+        break;
     }
     return res;
   }
