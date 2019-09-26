@@ -109,7 +109,6 @@
     "typescript": "^3.0.3"
   },
   "dependencies": {
-    "class-validator": "^0.9.1",
-    "lib-web-api-client": "https://gitlab.lakeel.com/applications/libs/lib-web-api-client.git#1.0.0"
+    "class-validator": "^0.9.1"
   }
 }
