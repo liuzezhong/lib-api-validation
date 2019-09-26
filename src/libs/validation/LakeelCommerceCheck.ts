@@ -25,6 +25,7 @@ const res: any = {
 @ValidatorConstraint({ name: 'LAKEEL_COMMERCE_CHECK', async: false })
 export class LakeelCommerceCheck implements ValidatorConstraintInterface {
   validate(validObj: any, args: ValidationArguments): boolean {
+    console.log('validObj', validObj);
     if (validObj.type !== validTypeEnum.FETCH_API && !validObj.value) {
       res.errorCode = 'E0001';
       res.validResult = false;

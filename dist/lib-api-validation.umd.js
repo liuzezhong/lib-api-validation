@@ -11849,6 +11849,7 @@
 	    function LakeelCommerceCheck() {
 	    }
 	    LakeelCommerceCheck.prototype.validate = function (validObj, args) {
+	        console.log('validObj', validObj);
 	        if (validObj.type !== validTypeEnum.FETCH_API && !validObj.value) {
 	            res.errorCode = 'E0001';
 	            res.validResult = false;
