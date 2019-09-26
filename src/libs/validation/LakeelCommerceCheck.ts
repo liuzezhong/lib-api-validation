@@ -12,8 +12,8 @@ import {
 // };
 
 enum validTypeEnum {
-  FETCH_API,
-  IS_STRING
+  FETCH_API = 'fetch_api',
+  IS_STRING = 'is_string'
 }
 
 const res: any = {

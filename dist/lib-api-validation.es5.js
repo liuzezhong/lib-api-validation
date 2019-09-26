@@ -11831,8 +11831,8 @@ var IsNumberString = (function () {
 
 var validTypeEnum;
 (function (validTypeEnum) {
-    validTypeEnum[validTypeEnum["FETCH_API"] = 0] = "FETCH_API";
-    validTypeEnum[validTypeEnum["IS_STRING"] = 1] = "IS_STRING";
+    validTypeEnum["FETCH_API"] = "fetch_api";
+    validTypeEnum["IS_STRING"] = "is_string";
 })(validTypeEnum || (validTypeEnum = {}));
 var res = {
     errorCode: '',
